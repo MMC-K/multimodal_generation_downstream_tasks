@@ -35,9 +35,8 @@ bash scripts/run_veld_finetune_redcaps_start_not_aligned_bg.sh # redcaps
 ## Fine-tuning 평가
 `<model_name>`에는 각 학습으로 부터 model_output에 생성된 폴더 이름이 들어간다.
 ```bash
-bash scripts/run_veld_test_bg.sh ./model_output/<model_name>
-bash scripts/run_veld_test_redcaps_bg.sh ./model_output/<model_name>
-bash scripts/run_veld_test_coco_karparthy_bg.sh ./model_output/<model_name>
+bash scripts/run_veld_test_bg.sh ./model_output/<model_name> # cc3m
+bash scripts/run_veld_test_redcaps_bg.sh ./model_output/<model_name> # redcaps
 ```
 
 ## 결과
