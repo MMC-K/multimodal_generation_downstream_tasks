@@ -5,7 +5,7 @@
 
 이를 위해 사전학습된 VL-KE-T5와 그렇지 않은 VL-KE-T5를 두 가지 downstream task (cc3m, redcaps)에대해 fine-tuning해보고
 성능을 비교해보았습니다.
- 
+
 ## 필요 패키지 설치
 
 ```bash
