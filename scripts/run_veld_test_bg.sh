@@ -1,4 +1,4 @@
-#MODEL_PATH="/mnt/nfs4/byunggill/VL-KE-T5/model_output/veld_finetune_e100_linear_27/"
+#MODEL_PATH="../VL-KE-T5/model_output/veld_finetune_e100_linear_27/"
 MODEL_PATH=${1}
 if [[ $# -eq 0 ]];
 then
@@ -10,24 +10,24 @@ echo "[*] MODEL_PATH: "${MODEL_PATH}
 accelerate launch  testing_veldt5_accelerate_bg.py \
 --per_device_train_batch_size 4 \
 --per_device_eval_batch_size 4 \
---hf_data_dir /mnt/nfs4/byunggill/datasets/cc3m/images_384 \
---validation_path /mnt/nfs4/byunggill/datasets/cc3m/validation_en_ko-filtered.json \
+--hf_data_dir ../datasets/cc3m/images_384 \
+--validation_path ../datasets/cc3m/validation_en_ko-filtered.json \
 --vision_model ${MODEL_PATH} \
 --language_model ${MODEL_PATH} \
 --from_veld_model ${MODEL_PATH}
 
 
-# --vision_model '/mnt/nfs4/byunggill/VL-KE-T5/veld_finetune_e1_linear_0/' \
-# --language_model '/mnt/nfs4/byunggill/VL-KE-T5/veld_finetune_e1_linear_0/' \
-# --from_veld_model "/mnt/nfs4/byunggill/VL-KE-T5/veld_finetune_e1_linear_0/"
+# --vision_model '../VL-KE-T5/veld_finetune_e1_linear_0/' \
+# --language_model '../VL-KE-T5/veld_finetune_e1_linear_0/' \
+# --from_veld_model "../VL-KE-T5/veld_finetune_e1_linear_0/"
 
-# --vision_model '/mnt/nfs4/byunggill/VL-KE-T5/veld_finetune_start_not_aligned_e1_linear_0/' \
-# --language_model '/mnt/nfs4/byunggill/VL-KE-T5/veld_finetune_start_not_aligned_e1_linear_0/' \
-# --from_veld_model "/mnt/nfs4/byunggill/VL-KE-T5/veld_finetune_start_not_aligned_e1_linear_0/"
+# --vision_model '../VL-KE-T5/veld_finetune_start_not_aligned_e1_linear_0/' \
+# --language_model '../VL-KE-T5/veld_finetune_start_not_aligned_e1_linear_0/' \
+# --from_veld_model "../VL-KE-T5/veld_finetune_start_not_aligned_e1_linear_0/"
 
-# --vision_model '/mnt/nfs4/byunggill/VL-KE-T5/VELD-pretrained/veld_e1_linear/' \
-# --language_model '/mnt/nfs4/byunggill/VL-KE-T5/VELD-pretrained/veld_e1_linear/' \
-# --from_veld_model "/mnt/nfs4/byunggill/VL-KE-T5/VELD-pretrained/veld_e1_linear/"
+# --vision_model '../VL-KE-T5/VELD-pretrained/veld_e1_linear/' \
+# --language_model '../VL-KE-T5/VELD-pretrained/veld_e1_linear/' \
+# --from_veld_model "../VL-KE-T5/VELD-pretrained/veld_e1_linear/"
 
 # --vision_model 'KETI-AIR/veld-base' \
 # --language_model 'KETI-AIR/veld-base' \
@@ -47,4 +47,4 @@ accelerate launch  testing_veldt5_accelerate_bg.py \
 # --with_tracking \
 # --output_dir ____veld_finetune_e${epochs}_${scheduler_type} \
 # --dataset_name_lm sent_dataset_bg.py \
-# --train_path /mnt/nfs4/byunggill/datasets/cc3m/train_en_ko-filtered.json \
+# --train_path ../datasets/cc3m/train_en_ko-filtered.json \

@@ -77,8 +77,6 @@ class SentDataset(datasets.GeneratorBasedBuilder):
         )
 
     def _split_generators(self, dl_manager: datasets.DownloadManager):
-        print("[BG] dl_manager.manual_dir : ", dl_manager.manual_dir)
-        print("[BG] glob", glob.glob(os.path.join(dl_manager.manual_dir, TRAINING_FILE_PATTERN)))
         path_kv = {
             datasets.Split.TRAIN: glob.glob(os.path.join(dl_manager.manual_dir, TRAINING_FILE_PATTERN)),
         }

@@ -15,8 +15,8 @@ accelerate launch training_veldt5_accelerate.py \
 --with_tracking \
 --output_dir model_output/veld_finetune_redcaps_e${epochs}_${scheduler_type} \
 --dataset_name_lm sent_dataset_bg.py \
---hf_data_dir_lm /mnt/nfs4/byunggill/datasets/cc3m/ \
---hf_data_dir /mnt/nfs4/byunggill/datasets/red_caps/images_384 \
---train_path /mnt/nfs4/byunggill/datasets/red_caps/train_en_ko-train-split-0-0.01.json \
---validation_path /mnt/nfs4/byunggill/datasets/red_caps/train_en_ko-validation-split.json \
+--hf_data_dir_lm ../datasets/cc3m/ \
+--hf_data_dir ../datasets/red_caps/images_384 \
+--train_path ../datasets/red_caps/train_en_ko-train-split-0-0.01.json \
+--validation_path ../datasets/red_caps/train_en_ko-validation-split.json \
 --from_veld_pretrained 'KETI-AIR/veld-base' \

@@ -7,9 +7,9 @@ learning_rate=0.001
 scheduler_type=linear
 
 accelerate launch training_retriever_accelerate_bg.py \
---image_root_dir /mnt/nfs4/byunggill/datasets/cc3m/images_384 \
---train_path /mnt/nfs4/byunggill/datasets/cc3m/train_en_ko-filtered.json \
---validation_path /mnt/nfs4/byunggill/datasets/cc3m/validation_en_ko-filtered.json \
+--image_root_dir ../datasets/cc3m/images_384 \
+--train_path ../datasets/cc3m/train_en_ko-filtered.json \
+--validation_path ../datasets/cc3m/validation_en_ko-filtered.json \
 --vision_model 'google/vit-base-patch16-384' \
 --language_model 'KETI-AIR/ke-t5-base' \
 --gradient_accumulation_steps 32 \

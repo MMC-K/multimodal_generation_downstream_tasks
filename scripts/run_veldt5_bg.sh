@@ -14,10 +14,10 @@ accelerate launch training_veldt5_accelerate.py \
 --with_tracking \
 --output_dir veld_e${epochs}_${scheduler_type} \
 --dataset_name_lm sent_dataset_bg.py \
---hf_data_dir_lm /mnt/nfs4/byunggill/datasets/cc3m/ \
---hf_data_dir /mnt/nfs4/byunggill/datasets/cc3m/images_384 \
---train_path /mnt/nfs4/byunggill/datasets/cc3m/train_en_ko-filtered.json \
---validation_path /mnt/nfs4/byunggill/datasets/cc3m/validation_en_ko-filtered.json \
+--hf_data_dir_lm ../datasets/cc3m/ \
+--hf_data_dir ../datasets/cc3m/images_384 \
+--train_path ../datasets/cc3m/train_en_ko-filtered.json \
+--validation_path ../datasets/cc3m/validation_en_ko-filtered.json \
 
 
 # accelerate launch training_veldt5_accelerate.py \
@@ -33,7 +33,7 @@ accelerate launch training_veldt5_accelerate.py \
 # --with_tracking \
 # --output_dir veld_e${epochs}_${scheduler_type} \
 # --dataset_name_lm sent_dataset_bg.py \
-# --hf_data_dir_lm /mnt/nfs4/byunggill/datasets/cc3m/ \
-# --hf_data_dir /mnt/nfs4/byunggill/datasets/cc3m/images_384 \
-# --train_path /mnt/nfs4/byunggill/datasets/cc3m/train_en_ko-filtered.json \
-# --validation_path /mnt/nfs4/byunggill/datasets/cc3m/validation_en_ko-filtered.json \
+# --hf_data_dir_lm ../datasets/cc3m/ \
+# --hf_data_dir ../datasets/cc3m/images_384 \
+# --train_path ../datasets/cc3m/train_en_ko-filtered.json \
+# --validation_path ../datasets/cc3m/validation_en_ko-filtered.json \

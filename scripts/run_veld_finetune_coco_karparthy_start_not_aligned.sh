@@ -16,7 +16,7 @@ accelerate  launch training_veldt5_accelerate.py \
 --with_tracking \
 --output_dir model_output/veld_finetune_coco_karparthy_start_not_aligned_e${epochs}_${scheduler_type} \
 --dataset_name_lm sent_dataset_bg.py \
---hf_data_dir_lm /mnt/nfs4/byunggill/datasets/cc3m/ \
---hf_data_dir /mnt/nfs4/byunggill/datasets/coco-karparthy-complete/images_384/ \
---train_path /mnt/nfs4/byunggill/datasets/coco-karparthy-complete/train_en_ko.json \
---validation_path /mnt/nfs4/byunggill/datasets/coco-karparthy-complete/validation_en_ko.json \
+--hf_data_dir_lm ../datasets/cc3m/ \
+--hf_data_dir ../datasets/coco-karparthy-complete/images_384/ \
+--train_path ../datasets/coco-karparthy-complete/train_en_ko.json \
+--validation_path ../datasets/coco-karparthy-complete/validation_en_ko.json \
